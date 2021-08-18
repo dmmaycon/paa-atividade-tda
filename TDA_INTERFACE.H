@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stlib.h>
 
-boolean criaSala(int fileiras, int carteiras)
+SalaAula criaSala(int fileiras, int carteiras)
 {
   
 }
