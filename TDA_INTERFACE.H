@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stlib.h>
 
-boolean criaSala()
+boolean criaSala(int fileiras, int carteiras)
 {
   
 }
@@ -10,19 +10,19 @@ boolean destroiSala(){
   
 }  
 
-boolean adicionaAluno(String nome, int cadeira){
+boolean adicionaAluno(String nome, int carteira){
   
 }  
 
-boolean moveAluno(int cadeiraAtual, int novaCadeira){
+boolean moveAluno(int carteiraAtual, int novaCarteira){
   
 }  
 
-boolean removeAluno(int cadeira){
+boolean removeAluno(int carteira){
   
 }
 
-int[] consultaAlunos(){
+int[][] consultaAlunos(){
   
 }
 
