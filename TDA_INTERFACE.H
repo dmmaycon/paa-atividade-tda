@@ -10,15 +10,15 @@ boolean destroiSala(){
   
 }  
 
-boolean adicionaAluno(String nome, int carteira){
+boolean adicionaAluno(String nome, int fileira, int carteira){
   
 }  
 
-boolean moveAluno(int carteiraAtual, int novaCarteira){
+boolean moveAluno(int fileiraAtual, int carteiraAtual, int novaFileira, int novaCarteira){
   
 }  
 
-boolean removeAluno(int carteira){
+boolean removeAluno(int fileira, int carteira){
   
 }
 
