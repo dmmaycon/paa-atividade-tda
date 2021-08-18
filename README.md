@@ -3,7 +3,7 @@
 
 -----
 Grupo E
-Alunos: Grabiel Abatti, Marlow Dickel, Maycon Douglas de Moraes
+Alunos: Gabriel Abatti, Marlow Dickel, Maycon Douglas de Moraes
 -----
 ### TDA Escolhido: (Abstração de uma Sala de Aula)
 - Criar um tipo de dado abstrado para representar a abstração de uma sala de aula. 
