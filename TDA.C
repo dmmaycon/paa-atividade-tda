@@ -5,7 +5,6 @@ typedef struct SalaAula
 {
     int numeroFileira;
     int carteiras;
-    // char disposicaoSala[][]; 
     SalaAula (*criaSala) (int f, int c);
 
 } SalaAula;
@@ -24,9 +23,7 @@ boolean muda_posi(int fila_atual, int cart_atual, int fila_nova, int cart_nova){
         *POS_nome = POS_vazia;
         return true;
     }
-    else{
-        return false;
-    }
+    return false;
 }
 
 /******************* função para excluir a posição do aluno *********************/
@@ -37,13 +34,11 @@ boolean excl_posi(int fila, int cart){
 /******************* função para adicionar o aluno *********************/
 boolean add_aluno(int fila, int cart, char nome){
     char *POS_nome;
-    if (SalaAula[fila][cart] == POS_vazia){
+    if (isCarteiraVazia(fila, cart)){
         SalaAula[fila][cart] = nome;
         return true;
     }
-    else{
-        return false;
-    }
+    return false;
 }
 
 
@@ -66,7 +61,7 @@ void ver_alunos(int fila, int cart){
     {
         for(m = 1; contador <= cart; contador++)
         {
-            if (SalaAula[n][m] != POS_vazia){
+            if (isCarteiraVazia(n,m)){
                 printf("Nome: %c  fila: %d  carteira: %d", SalaAula[n][m], n, m);
             }
         }    
@@ -74,13 +69,13 @@ void ver_alunos(int fila, int cart){
 }
 
 /******************* função para ver quantos espaços vazios há na sala *********************/
-int ver_espacos(){
+void ver_espacos(){
     int n, m;
     for(n = 1; contador <= fila; contador++)
     {
         for(m = 1; contador <= cart; contador++)
         {
-            if (SalaAula[n][m] == POS_vazia){
+            if (!isCarteiraVazia(n.m)){
                 printf("Nome: Vazia  fila: %d  carteira: %d", n, m);
             }
         }    
@@ -89,5 +84,8 @@ int ver_espacos(){
 
 /******************* função para verificar se uma determinada carteira está vazia *********************/
 boolean isCarteiraVazia(int fileira, int carteira){
-  
+    if (SalaAula[fileira][carteira] == POS_vazia) {
+        return true;
+    }
+    return false;
 }
