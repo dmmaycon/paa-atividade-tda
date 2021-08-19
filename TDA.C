@@ -60,13 +60,31 @@ void limp_sala(int fila, int cart){
 }
 
 /******************* função para retornar os alunos da sala *********************/
-int[][] ver_alunos(){
-    
+void ver_alunos(int fila, int cart){
+    int n, m;
+    for(n = 1; contador <= fila; contador++)
+    {
+        for(m = 1; contador <= cart; contador++)
+        {
+            if (SalaAula[n][m] != POS_vazia){
+                printf("Nome: %c  fila: %d  carteira: %d", SalaAula[n][m], n, m);
+            }
+        }    
+    }
 }
 
 /******************* função para ver quantos espaços vazios há na sala *********************/
 int ver_espacos(){
-    
+    int n, m;
+    for(n = 1; contador <= fila; contador++)
+    {
+        for(m = 1; contador <= cart; contador++)
+        {
+            if (SalaAula[n][m] == POS_vazia){
+                printf("Nome: Vazia  fila: %d  carteira: %d", n, m);
+            }
+        }    
+    }
 }
 
 /******************* função para verificar se uma determinada carteira está vazia *********************/
