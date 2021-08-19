@@ -47,7 +47,7 @@ boolean add_aluno(int fila, int cart, char nome){
 }
 
 
-/******************* função para limpar as salar *********************/
+/******************* função para limpar as salas *********************/
 void limp_sala(int fila, int cart){
     int n, m;
     for(n = 1; contador <= fila; contador++)
@@ -59,4 +59,17 @@ void limp_sala(int fila, int cart){
     }
 }
 
+/******************* função para retornar os alunos da sala *********************/
+int[][] ver_alunos(){
+    
+}
 
+/******************* função para ver quantos espaços vazios há na sala *********************/
+int ver_espacos(){
+    
+}
+
+/******************* função para verificar se uma determinada carteira está vazia *********************/
+boolean isCarteiraVazia(int fileira, int carteira){
+  
+}
