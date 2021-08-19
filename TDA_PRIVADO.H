@@ -2,8 +2,4 @@
 
 #define POS_vazia  ""
 
-boolean isCarteiraVazia(int fileira, int carteira){
-  
-}
-
-
+boolean isCarteiraVazia(int fileira, int carteira);
