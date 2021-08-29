@@ -1,5 +1,14 @@
-#include <TDA_INTERFACE.H>
+#include <Pilha_INTERFACE.H>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stddef.h>
 
-#define POS_vazia  ""
+#define TAM_MAX 10
 
-boolean isCarteiraVazia(int fileira, int carteira);
+struct mpilhas
+{
+    void* vetor[TAM_MAX];
+    int tamanhoElemento;//tamanho do elemento dinâmico em memória
+    int topo;//indice do topo atual da fila, inicia em 0
+} typedef pilha;
