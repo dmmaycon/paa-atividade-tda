@@ -1,10 +1,15 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include <stlib.h>
+#include <stdbool.h>
+#include <stddef.h>
 
-SalaAula *criaSala(int fileiras, int carteiras);
-void limp_sala(int fila, int cart);
-boolean add_aluno(int fila, int cart, char nome);
-boolean muda_posi(int fila_atual, int cart_atual, int fila_nova, int cart_nova);
-boolean excl_posi(int fila, int cart);
-int[][] ver_alunos();
-int ver_espacos();
+typedef struct mpilhas pilha;
+
+
+void Destroy (pilha *p);
+bool IsFull (pilha *p);
+int Top (pilha *p);
+bool IsEmpty (pilha *p);
+void Push (pilha *p, int elemento);
+int Pop (pilha *p);
+
