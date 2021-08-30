@@ -4,3 +4,11 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+
+struct {
+    int info;
+} typedef ElementInt;
+
+struct {
+    char info[255];
+} typedef ElementChar;
