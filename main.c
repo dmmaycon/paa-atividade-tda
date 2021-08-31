@@ -1,52 +1,41 @@
-//livro C Completo total
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdbool.h>
-#include <stddef.h>
+/*livro C Completo total
+Base de: Apostila de Estruturas de Dados
+Profs. Waldemar Celes e José Lucas Rangel PUC-RIO - Curso de Engenharia - 2002
+*/
+
 #include "Aplicacao.h"
 
 
 
-void Most_LimpaC(pilha* pil) {
-    while(!IsEmpty(pil)){
-        printf("Valor: %s\n",((ElementChar*)Pop(pil))->info);
-    }
-}
-
-void Most_LimpaI(pilha* pil) {
-    while(!IsEmpty(pil)){
-        printf("Valor: %s\n",((ElementInt*)Pop(pil))->info);
-    }
-}
-
-void adicionarElementoInt(int val, pilha* p) {
-    ElementInt* i = (ElementInt*) malloc(sizeof(ElementInt));
-    i->info = val; Push(p, i);
-}
-void adicionarElementoChar(char val[], pilha* p) {
-    ElementChar* i = (ElementChar*) malloc(sizeof(ElementChar));
-    strcpy(i->info, val); Push(p, i);
-}
-
 int main()
 {
-    int num;
-    pilha* P1i = Criapilha(sizeof(ElementInt));
-    //pilha* P2c = Criapilha(sizeof(ElementChar));
+    Pilha* P1 = Init(sizeof(ItemInt));
+    Pilha* P2 = Init(sizeof(ItemChar));
+    printf("Pilha de Inteiros: \n");
 
-    printf("Tipo de Itens:  0-Inteiro e 1-Char");
-    //scanf("%d\n", tam);
+    addElementoInt(7, P1);
+    Pop(P1);
+    addElementoInt(6, P1);
+    VeTopoInt(P1);
+    addElementoInt(5, P1);
+    addElementoInt(4, P1);
+    printf("Elementos da Pilha de Inteiros: \n");
 
-    printf("Operações:\n");
-    printf("0 - sair\n");
-    printf("1 - Insere\n");
-    printf("2 - Remove\n");
-    printf("3 - Elemento do Topo\n");
+    EsvaziaPilhaInt(P1);
 
-    adicionarElementoInt(1, P1i);
-    adicionarElementoInt(2, P1i);
-    adicionarElementoInt(3, P1i);
-    adicionarElementoInt(4, P1i);
-    Most_LimpaI(P1i);
+    printf("\n\n");
+    printf("Pilha de String: \n");
 
+    printf("Elementos da Pilha de String: \n");
+    addElementoChar("A", P2);
+
+    VeTopoChar(P2);
+    addElementoChar("B", P2);
+    Pop(P2);
+    addElementoChar("C", P2);
+    addElementoChar("D", P2);
+
+    EsvaziaPilhaChar(P2);
+
+    return 0;
 }
