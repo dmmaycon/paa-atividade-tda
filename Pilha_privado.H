@@ -4,14 +4,21 @@
 #include <stdbool.h>
 #include <stddef.h>
 
+#ifndef PILHA_PRIVADO_H
+#define PILHA_PRIVADO_H
+
+
 #define TAM_MAX 10
+#define TRUE 1
+#define FALSE 0
 
-struct mpilhas
-{
-    void* vetor[TAM_MAX];
-    int tamanhoElemento;//tamanho do elemento dinâmico em memória
-    int topo;//indice do topo atual da fila, inicia em 0
-} typedef pilha;
+ struct mPilhas{
+    void* itens[TAM_MAX];
+    int tamItem;
+    int topo;
+} typedef Pilha;
 
 
+
+#endif
 
