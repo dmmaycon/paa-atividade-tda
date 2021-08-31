@@ -5,69 +5,48 @@
 #include <stdbool.h>
 #include <stddef.h>
 
-pilha *Criapilha(int refElemento){
-    //versão 2 - generico
-    pilha* p = (pilha*) malloc(sizeof(pilha));
-    p->topo = 0;
-    p->tamanhoElemento = sizeof(refElemento);
-    return p;
+Pilha* Init(int tItem) {
+    Pilha* pilha = (Pilha*) malloc(sizeof(Pilha));
+    pilha->topo = 0;
+    pilha->tamItem = tItem;
+    return pilha;
 }
 
-void Destroy (pilha *p){
-    printf("limpando\n");
-    free(p);
-    p=0;
-}
-bool IsFull (pilha *p){
-    //printf("tá cheio?\n");
-    if (p->topo==TAM_MAX){
-        return true;
-    }else{
-        return false;
-    }
+void Destroy(Pilha* pilha) {
+    free(pilha);
+    printf("Destroi a Pilha\n");
 }
 
-bool IsEmpty (pilha *p){
-    //printf("vazio?\n");
-    if (p->topo==0){
-        return true;
-    }else{
-        return false;
-    }
+int IsFull(Pilha* pilha) {
+    if (pilha->topo == TAM_MAX) return TRUE;
+    else return FALSE;
 }
 
-int Top (pilha *p){
-    //printf("topo\n");
-    if(!IsEmpty(p))
-    {
-        int elementoT = p->vetor[(p->topo - 1)];
-        return elementoT;
-    }
-    else{
-        printf("A pilha está vazia.\n");
-    }
-
+int IsEmpty(Pilha* pilha) {
+    if (pilha->topo == 0) return TRUE;
+    else return FALSE;
 }
 
-void Push (pilha *p, int elemento){
-    if(!IsFull(p)){
-        printf("insere na pos. ");
-        printf("%d\n",p->topo);
-        p->vetor[p->topo] = elemento;
-        p->topo++;
-    }
-    else{
-        printf("Pilha esta cheia!\n");
-    }
+void* Pop(Pilha* pilha) {
+    if (!IsEmpty(pilha)) {
+        void* elRemovido = malloc(pilha->tamItem);
+        memcpy(elRemovido, pilha->itens[pilha->topo - 1], pilha->tamItem);
+        pilha->topo--;
+        return elRemovido;
+    } else return NULL;
+}
+void* Top(Pilha* pilha) {
+    if (!IsEmpty(pilha)) {
+        void* elTopo = malloc(pilha->tamItem);
+        memcpy(elTopo, pilha->itens[pilha->topo - 1], pilha->tamItem);
+        return elTopo;
+    } else return NULL;
+
+}
+void Push(int item, Pilha* pilha) {
+    if (!IsFull(pilha)) {
+        pilha->itens[pilha->topo] = item;
+        pilha->topo++;
+    } else printf("Pilha cheia!\n");
 }
 
-int Pop (pilha *p){
-    if(!IsEmpty(p)){
-        int i = p->vetor[p->topo-1];
-        p->topo--;
-        return i;
-    }
-    else{
-        printf("Pilha esta Vazia!\n");
-    }
-}
