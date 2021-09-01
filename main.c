@@ -1,8 +1,3 @@
-/*livro C Completo total
-Base de: Apostila de Estruturas de Dados
-Profs. Waldemar Celes e José Lucas Rangel PUC-RIO - Curso de Engenharia - 2002
-*/
-
 #include "Aplicacao.h"
 
 
