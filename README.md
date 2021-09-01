@@ -5,15 +5,9 @@
 Grupo E
 Alunos: Gabriel Abatti, Marlow Dickel, Maycon Douglas de Moraes
 -----
-### TDA Escolhido: (Abstração de uma Sala de Aula)
-- Criar um tipo de dado abstrado para representar a abstração de uma sala de aula. 
-- Com recursos de criar uma sala.
-- Destruir uma sala de aula.
-- Adicionar aluno.
-- Remover aluno.
-- Trocar aluno de lugar.
-- Verificar quantos alunos tem em sala de aula.
-- Verificar quantos assentos tem disponível em sala de aula.
-
+### Atividade 2 - Pilha Generica Homogenea
+- Desenvolver uma pilha em C que possa receber diferentes tipos
+de dados e prover a estrutrutura padrão de uma pilha para manipular 
+essas informações.
 
 
