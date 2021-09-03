@@ -1,5 +1,5 @@
-#include "Pilha_privado.h"
-//#include <string.h>
+#include "Pilha_privado.H"
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -7,12 +7,22 @@
 
 Pilha* Init(int tItem) {
     Pilha* pilha = (Pilha*) malloc(sizeof(Pilha));
-    pilha->topo = 0;
-    pilha->tamItem = tItem;
+    if (pilha){
+        pilha->topo = 0;
+        pilha->tamItem = tItem;
+    //pilha->itens = (Pilha*) malloc(sizeof(Pilha + tItem*10))
+    } else printf("Não criou a Pilha\n");
+
     return pilha;
 }
 
 void Destroy(Pilha* pilha) {
+    int i;
+    if(!IsEmpty(pilha)){
+        for(i=0;i<pilha->topo;i++){
+            free(pilha->itens[i]);
+        }
+    }
     free(pilha);
     printf("Destroi a Pilha\n");
 }
@@ -43,10 +53,15 @@ void* Top(Pilha* pilha) {
     } else return NULL;
 
 }
-void Push(int item, Pilha* pilha) {
+void Push(void *ponteiroItem, Pilha* pilha){
     if (!IsFull(pilha)) {
-        pilha->itens[pilha->topo] = item;
+        pilha->itens[pilha->topo] = (void*) malloc(pilha->tamItem);
+        memcpy(pilha->itens[pilha->topo], ponteiroItem, pilha->tamItem);
         pilha->topo++;
     } else printf("Pilha cheia!\n");
 }
 
+//criei esse pra testar se o arquivo era visível pelo main
+void msgPilha() {
+    printf("msgPilha\n");
+}
