@@ -1,4 +1,4 @@
-#include "Pilha_pub.H"
+#include "Pilha_pub.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -18,8 +18,7 @@
 } typedef Pilha;
 
 //criei esse pra testar se o arquivo era visível pelo main
-void msgPilhaPrivado() {
-    printf("msgPilhaPrivado\n");
-}
+
 
 #endif
+
