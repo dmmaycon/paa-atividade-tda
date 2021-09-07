@@ -1,4 +1,4 @@
-#include "Pilha_privado.H"
+#include "Pilha_privado.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -59,9 +59,4 @@ void Push(void *ponteiroItem, Pilha* pilha){
         memcpy(pilha->itens[pilha->topo], ponteiroItem, pilha->tamItem);
         pilha->topo++;
     } else printf("Pilha cheia!\n");
-}
-
-//criei esse pra testar se o arquivo era visível pelo main
-void msgPilha() {
-    printf("msgPilha\n");
 }
