@@ -17,9 +17,4 @@ void Push(void *ponteiroItem, Pilha* pilha);
 void* Pop(Pilha* pilha);
 void* Top(Pilha* pilha);
 
-//criei esse pra testar se o arquivo era visível pelo main
-void msgPilhaPub() {
-    printf("msgPilhaPub\n");
-}
-
 #endif
