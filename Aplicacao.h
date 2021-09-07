@@ -1,4 +1,3 @@
-#include "Pilha_pub.H"
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
@@ -15,9 +14,13 @@ typedef struct {
     char info[255];
 } ItemChar;
 
+typedef struct {
+    float info;
+} ItemFloat;
+
+
+
 //criei esse pra testar se o arquivo era visível pelo main
-void msgAplicacao() {
-    printf("msgAplicacao\n");
-}
+
 
 #endif
