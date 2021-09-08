@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include "pilha_pub.h"
 
 #ifndef APLICACAO_H
 #define APLICACAO_H

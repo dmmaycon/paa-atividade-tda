@@ -1,4 +1,4 @@
-#include "Pilha_privado.h"
+#include "pilha_privado.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>

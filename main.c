@@ -1,16 +1,9 @@
-/*livro C Completo total
-Base de: Apostila de Estruturas de Dados
-Profs. Waldemar Celes e José Lucas Rangel PUC-RIO - Curso de Engenharia - 2002
-*/
-
-#include "Aplicacao.h"
-//#include "Pilha.c" //isso é o que eu acho que não deve ser o certo, mas só assim funciona...
+#include "aplicacao.h"
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
 #include <stddef.h>
-
 
 void VeTopoInt(Pilha* pilha) {
     void* item = Top(pilha);
@@ -79,8 +72,8 @@ int main()
     int valor2 = 6;
     int valor3 = 5;
     int valor4 = 4;
-    printf("conteudo vari: %i\n",valor);
-    printf("endereco vari: %i\n",&valor);
+    printf("conteudo vari: %d\n",valor);
+    printf("endereco vari: %p\n",&valor);
     addElementoInt(&valor, P1);
     Pop(P1);
 
